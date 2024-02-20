@@ -5,7 +5,6 @@ function findMaxConsecutiveOnes(nums: number[]): number {
     for (let i = 0; i < nums.length; i++) {
       if (nums[i] === 1) {
         consecutiveOnes = consecutiveOnes + 1;
-        console.log(consecutiveOnes)
       } else {
         consecutiveOnes = 0
       }
@@ -13,12 +12,11 @@ function findMaxConsecutiveOnes(nums: number[]): number {
           arrayOfConsecutiveOnes.push(consecutiveOnes)
       }
     }
-  console.log(arrayOfConsecutiveOnes)
+
   for (let j = 0; j < arrayOfConsecutiveOnes.length; j++) {
     if (arrayOfConsecutiveOnes[j] > largest) {
       largest = arrayOfConsecutiveOnes[j]
     }
   }
-  console.log(largest)
   return largest
 };
