@@ -6,5 +6,4 @@ class Solution:
         if nums[l] != r:
           l+=1
           nums[l] = r
-        print(l)
       return l + 1
