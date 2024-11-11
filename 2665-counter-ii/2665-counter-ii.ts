@@ -5,11 +5,17 @@ type Counter = {
 }
 
 function createCounter(init: number): Counter {
-    let counter = init
+    let cur = init
     return {
-        increment: () => ++counter,
-        decrement: () => --counter,
-        reset: () => counter = init 
+        increment: () => {
+            return ++cur
+        },
+        decrement: () => {
+            return --cur
+        },
+        reset: () => {
+            return cur = init
+        }
     }
 };
 
