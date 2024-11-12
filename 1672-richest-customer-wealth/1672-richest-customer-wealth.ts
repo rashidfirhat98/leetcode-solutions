@@ -5,9 +5,7 @@ function maximumWealth(accounts: number[][]): number {
         for(let j = 0; j < accounts[i].length; j++) {
             curSum += accounts[i][j]
         }
-        if(curSum > highestSum){
-            highestSum = curSum
-        }
+        highestSum = Math.max(highestSum, curSum)
     }
     return highestSum
 };
